@@ -28,8 +28,8 @@ function SubscriptionPage() {
 
         var minutes = Math.floor(video.duration / 60);
         var seconds = Math.floor(video.duration - minutes * 60);
-
-        return <Col lg={6} md={8} xs={24}>
+       
+        return <Col key={video._id} lg={6} md={8} xs={24}>
             <div style={{ position: 'relative' }}>
                 <a href={`/video/${video._id}`} >
                 <img style={{ width: '100%' }} alt="thumbnail" src={`http://localhost:5000/${video.thumbnail}`} />
@@ -61,7 +61,6 @@ function SubscriptionPage() {
         <div style={{ width: '85%', margin: '3rem auto' }}>
         <Title level={2} > Subscribed Videos </Title>
         <hr />
-
         <Row gutter={16}>
             {renderCards}
         </Row>

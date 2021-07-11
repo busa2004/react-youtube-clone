@@ -50,8 +50,8 @@ function LandingPage() {
                 title={video.title}
             />
             <span>{video.writer.name} </span><br />
-            <span style={{ marginLeft: '3rem' }}> {video.views}</span>
-            - <span> {moment(video.createdAt).format("MMM Do YY")} </span>
+            <span style={{ marginLeft: '3rem' }}> 조회수 {video.views} · </span>
+            <span> {moment(video.createdAt).format("YYYY-MM-DD")} </span>
         </Col>
 
     })
@@ -60,9 +60,6 @@ function LandingPage() {
 
     return (
         <div style={{ width: '85%', margin: '3rem auto' }}>
-            <Title level={2} > Recommended </Title>
-            <hr />
-
             <Row gutter={16}>
                 {renderCards}
             </Row>
