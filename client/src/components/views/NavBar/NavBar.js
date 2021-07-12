@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import LeftMenu from './Sections/LeftMenu';
 import RightMenu from './Sections/RightMenu';
+import CenterMenu from './Sections/CenterMenu';
 import { Drawer, Button, Icon } from 'antd';
 import './Sections/Navbar.css';
 const Logo = require('../../../assets/images/Logo.PNG');

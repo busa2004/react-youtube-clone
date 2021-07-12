@@ -13,6 +13,11 @@ function Subscriber(props) {
                 userTo : userTo,
                 userFrom : userFrom
         }
+        
+        if(!userFrom){
+            alert('로그인하십시오.')
+            return;
+        }
 
         if(Subscribed) {
             //when we are already subscribed 

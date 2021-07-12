@@ -63,6 +63,11 @@ function LikeDislikes(props) {
 
     const onLike = () => {
 
+        if(!variable.userId){
+            alert('로그인하십시오.')
+            return;
+        }
+
         if (LikeAction === null) {
 
             Axios.post('/api/like/upLike', variable)
